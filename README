@@ -1,0 +1,13 @@
+this uses jquery UI/Effects/switchClass with transitions
+parameters are:
+normal: starter class
+pump: class to transform to
+interval: time interval
+stop: if the object hast this stopper class it will break, 
+      you can set the class from the outside
+   
+usage: $('.status').pump({normal : 'someclass',
+                          pump :  'otherclass',
+                          interval : 400,
+                          stop : 'doneclass'
+                         });
