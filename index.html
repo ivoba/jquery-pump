@@ -27,7 +27,29 @@
     pre { background: #000; color: #fff; padding: 15px;}
     hr { border: 0; width: 80%; border-bottom: 1px solid #aaa}
     .footer { text-align:center; padding-top:30px; font-style: italic; }
+.status{
+	padding: 20px;
+ 	background-color:white; 
+	border: 1px solid black;
+	text-decoration: none;
+ 	text-transform: uppercase;
+        color: #7F7F7F;
+	font-size: 16px;
+}
+
+.pump{
+    color: silver;
+    line-height: 35px;
+}
+.pumpup{
+    color: #7F7F7F;
+    line-height: 35px;
+    font-size: 20px;
+}
   </style>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6/jquery.min.js"></script>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.13/jquery-ui.js"></script>
+<script type="text/javascript" src="https://raw.github.com/ivoba/jquery-pump/master/jquery.pump.js"></script>
 </head>
 
 <body>
@@ -46,14 +68,26 @@
       <span class="small">by <a href="http://github.com/ivoba">ivoba</a></span></h1>
 
     <div class="description">
-      pump effect
+      jquery pump effect
     </div>
 
     <p>this uses jquery UI/Effects/switchClass with transitions.
-it switches classes in an endless loop to perform something like a glow or pump effect unless you apply a stop class.</p><h2>Authors</h2>
-<p>ivo (ivo.bathke@gmail.com)<br/><br/>      </p>
+it switches classes in an endless loop to perform something like a glow or pump effect unless you apply a stop class.<br/>
+how you style the classes is up to you ;) ....
+</p>
+
+<h2>Authors</h2>
+<br/>
+Like this:<br/>
+<div class="status">
+PUMPIN...
+</div>
+<p>ivo (ivo.bathke@gmail.com)
+<br/>
+<br/>      </p>
 <h2>Contact</h2>
-<p> (ivo.bathke@gmail.com)<br/>      </p>
+<p> (ivo.bathke@gmail.com)
+<br/>      </p>
 
 
     <h2>Download</h2>
@@ -72,7 +106,12 @@ it switches classes in an endless loop to perform something like a glow or pump 
     </div>
 
   </div>
-
-  
+<script type="text/javascript">
+$(document).ready(function() {
+ $('.status').pump({normal: 'pump',
+                    pump: 'pumpup',
+                    interval: 400});
+});
+</script>  
 </body>
 </html>
